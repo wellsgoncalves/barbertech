@@ -23,10 +23,13 @@
     <!-- Custom styles for this template -->
     <link href="css/agency.min.css" rel="stylesheet">
 
+    <!--Icon na aba do site-->
+    <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon" />
+
   </head>
 
   <body id="page-top">
-
+<?php var_dump($_POST);?>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
@@ -421,11 +424,12 @@
         </div>
         <div class="row">
           <div class="col-lg-12">
-            <form id="contactForm" name="sentMessage" novalidate>
+            <!--form  method="Post" id="contactForm" name="sentMessage"  novalidate-->
+            <form  action="agendar.php" method="Post" id="agendar" name="agendar"  novalidate>
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <input class="form-control" id="name" type="text" placeholder="NOME" required data-validation-required-message="Insira o nome para o agendamento.">
+                    <input class="form-control" id="name" name="nome" type="text" placeholder="NOME" required data-validation-required-message="Insira o nome para o agendamento.">
                     <p class="help-block text-danger"></p>
                   </div>
                   <!--
@@ -435,20 +439,20 @@
                   </div>
                   -->
                   <div class="form-group">
-                    <input class="form-control" id="phone" type="tel" placeholder="TELEFONE" required data-validation-required-message="Insira um telefone para agendamento.">
+                    <input class="form-control" id="phone" name="telefone" type="tel" placeholder="TELEFONE" required data-validation-required-message="Insira um telefone para agendamento.">
                     <p class="help-block text-danger"></p>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <textarea class="form-control" id="message" placeholder="MENSAGEM" ></textarea>
+                    <textarea class="form-control" id="message" name="mensagem" placeholder="MENSAGEM" ></textarea>
                     <p class="help-block text-danger"></p>
                   </div>
                 </div>
                 <div class="clearfix"></div>
                 <div class="col-lg-12 text-center">
                   <div id="success"></div>
-                  <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">enviar</button>
+                  <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit" > enviar</button>
                 </div>
               </div>
             </form>
