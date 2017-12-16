@@ -29,7 +29,7 @@
   </head>
 
   <body id="page-top">
-<?php var_dump($_POST);?>
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
@@ -425,11 +425,11 @@
         <div class="row">
           <div class="col-lg-12">
             <!--form  method="Post" id="contactForm" name="sentMessage"  novalidate-->
-            <form  action="agendar.php" method="Post" id="agendar" name="agendar"  novalidate>
+            <form action="agendar.php" method="post" id="agendarForm" name="agendar"  novalidate>
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <input class="form-control" id="name" name="nome" type="text" placeholder="NOME" required data-validation-required-message="Insira o nome para o agendamento.">
+                    <input class="form-control" id="nome" name="nome" type="text" placeholder="NOME" required data-validation-required-message="Insira o nome para o agendamento.">
                     <p class="help-block text-danger"></p>
                   </div>
                   <!--
@@ -439,20 +439,20 @@
                   </div>
                   -->
                   <div class="form-group">
-                    <input class="form-control" id="phone" name="telefone" type="tel" placeholder="TELEFONE" required data-validation-required-message="Insira um telefone para agendamento.">
+                    <input class="form-control" id="telefone" name="telefone" type="tel" placeholder="TELEFONE" required data-validation-required-message="Insira um telefone para agendamento.">
                     <p class="help-block text-danger"></p>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <textarea class="form-control" id="message" name="mensagem" placeholder="MENSAGEM" ></textarea>
+                    <textarea class="form-control" id="mensagem" name="mensagem" placeholder="MENSAGEM" ></textarea>
                     <p class="help-block text-danger"></p>
                   </div>
                 </div>
                 <div class="clearfix"></div>
                 <div class="col-lg-12 text-center">
                   <div id="success"></div>
-                  <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit" > enviar</button>
+                  <button id="agendarButton" class="btn btn-primary btn-xl text-uppercase" type="submit" > enviar</button>
                 </div>
               </div>
             </form>
@@ -716,7 +716,8 @@
 
     <!-- Contact form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+    <!--script src="js/contact_me.js"></script>-->
+    <script src="js/agendar.js"></script>
 
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
